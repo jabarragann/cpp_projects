@@ -9,11 +9,7 @@ Num2Words::Num2Words()
 	std::cout << "Create a wordCreator"<<std::endl;
 	buffer = new int[maxSize];
 
-	//Initialize buffer
-	for (int i = 0 ; i<maxSize; i++)
-	{
-		buffer[i]=0;
-	}
+	memset (buffer,0, maxSize*sizeof(buffer[0]));
 }
 
 Num2Words::~Num2Words()
@@ -59,8 +55,8 @@ void Num2Words::fillBuffer (uint64_t number)
 }
 void Num2Words::clearBufferAndMessage()
 {
-	for(int i = 0; i<maxSize; i++) buffer[i] = 0;
-	for(int i = 0; i<messageSize; i++) message[i] = 0;
+	memset (buffer,0, maxSize*sizeof(buffer[0]));
+	memset (message,0, messageSize*sizeof(message[0]));
 }
 
 void Num2Words::printBuffer()
