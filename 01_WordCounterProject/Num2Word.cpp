@@ -75,7 +75,7 @@ void Num2Words::printBuffer()
 void Num2Words::getTripelDigit (char * str, int firstDigit, int secondDigit, int thirdDigit)
 {
 	int index;
-	//std::cout << firstDigit<<" "<<secondDigit<<" "<< thirdDigit <<std::endl;
+	
 	
 	if (firstDigit != 0)
 	{
